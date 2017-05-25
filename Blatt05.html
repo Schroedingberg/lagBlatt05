@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-05-25 Do 14:25 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Aaron" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge4de611">1. <span class="todo TODO">TODO</span> 1 <code>[1/2]</code></a></li>
+<li><a href="#org6ee0498">2. <span class="todo TODO">TODO</span> 2 <code>[0/2]</code></a>
+<ul>
+<li><a href="#org5ada0e9">2.1. <span class="todo TODO">TODO</span> a)</a></li>
+<li><a href="#orgd35ff10">2.2. <span class="todo TODO">TODO</span> b)</a></li>
+</ul>
+</li>
+<li><a href="#org5ca42a1">3. <span class="todo TODO">TODO</span> 3 <code>[0/4]</code></a>
+<ul>
+<li><a href="#org85d23fa">3.1. <span class="todo TODO">TODO</span> U</a></li>
+<li><a href="#orgea7e8b6">3.2. <span class="todo TODO">TODO</span> W</a></li>
+<li><a href="#orgddee816">3.3. <span class="todo TODO">TODO</span> U+W</a></li>
+<li><a href="#orga62e1a2">3.4. <span class="todo TODO">TODO</span> U &cap; W</a></li>
+</ul>
+</li>
+<li><a href="#orgd968fb3">4. <span class="todo TODO">TODO</span> 4 Sei K endlicher Körper mit q Elementen <code>[0/3]</code></a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge4de611" class="outline-2">
+<h2 id="orge4de611"><span class="section-number-2">1</span> <span class="todo TODO">TODO</span> 1 <code>[1/2]</code></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Seien \(U_1, U_2, U_3\) Unterräume eines Vektorraums V. zz:
+</p>
+<ul class="org-ul">
+<li class="on"><code>[X]</code> <p>
+a) \(U_1 \cup U_2 \leq V \Leftrightarrow U_1 \subseteq U_2 \lor U_2\subseteq U_1  \) 
+</p>
+
+<div class="proof">
+<p>
+<br />
+"\(\Rightarrow\)": <br />
+\(U_1\) und \(U_2\) sind Unterräume von \(V\). \(U_1\cup U_2\) ist ein Unterraum von \(V\).<br />
+Es ist somit sicher, dass \(U_1,U_2 \neq \emptyset\) und \(U_1 \cup U_2 \neq \emptyset\) .<br />
+Seien \(a,b \in U_1\cup U_2\). per definitionem gilt:<br />
+\(a+b \in U_1\cup U_2 \forall a,b \in U_1\cup U_2\) .
+Das bedeutet:<br />
+\(a+b \in U_1 \forall a,b \in U_1\cup U_2 \lor a+b \in U_2 \forall a,b \in U_1\cup U_2 \)<br />
+Das geht nur, wenn \(U_1 \subseteq U_2 \lor U_2\subseteq U_1\).<br />
+<br />
+"\(\Leftarrow\)":<br />
+Wenn ein Unterraum Teilmenge des anderen ist, dann ist die Vereinigung einfach die Obermenge (der Raum, der den anderen enthält).
+Da dieser p.d. ein Unterraum von V ist, ist also auch die Vereinigung ein Unterraum von V.
+</p>
+
+</div></li>
+
+<li class="off"><code>[&#xa0;]</code> <p>
+b) \((U_1 + U_2) \cap U_3 = U_1 + (U_2\cap U_3) \Leftrightarrow
+    U_1\subseteq U_3 \)   (Mir kommt das komisch vor, weil der Beweis nur über Mengenlehre läuft, nicht viel über Vektorraumeigenschaften)
+</p>
+<div class="proof">
+<p>
+<br />
+"\(\Rightarrow\)":<br />
+Seien \(v_1 \in U_1, v_2 \in U_3, v_1+v_2 \in U_{3}\).
+Dann gilt \(v_1+v_2 \in (U_1 + U_2) \cap U_3\)  und \(v_1+v_2 \in (U_1 + (U_2\cap U_3))\)
+\(\Rightarrow v_2 \in U_3\).
+Wegen \(v_1+v_2 \in U_{3}\) muss aber auch \(v_1 \in U_3\) sein.
+Aus der linken Seite folgt also (mit \(v_1+v_2 \in U_{3}\)), dass \(U_1\subseteq U_3\).
+<br />
+"\(\Leftarrow\):"
+Beweis durch Kontraposition: zz.: \((U_1 + U_2) \cap U_3 \neq U_1 + (U_2\cap U_3) \Leftrightarrow
+    U_1\nsubseteq U_3 \)
+Wenn linke Seite nicht gilt, dann für \(v_1\in U_1, v_2\in U_2\):
+</p>
+<div class="org-center">
+<p>
+\(v_1+ v_2 \notin U_3 \)
+</p>
+</div>
+<p>
+denn dann ist \(v_1+v_2 \notin (U_1+U_2)\cap U_3\) und \(v_1 + v_2 \in U_1 + (U_2\cap U_3)\).
+Dh. \(v_2\in U_2\cap U_3\) und \(v_1 \notin U_2\cap U_3\) (Wegen \(v_1+v_2\notin U_3\)), also \(v_1 \notin U_3\Rightarrow U_1 \nsubseteq U_3\)
+</p>
+
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6ee0498" class="outline-2">
+<h2 id="org6ee0498"><span class="section-number-2">2</span> <span class="todo TODO">TODO</span> 2 <code>[0/2]</code></h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org5ada0e9" class="outline-3">
+<h3 id="org5ada0e9"><span class="section-number-3">2.1</span> <span class="todo TODO">TODO</span> a)</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+\(K\) Körper. Welche Vektoren sind jeweils linear abhängig, welche
+linear unabhängig im \(K\)-VR  \(K^3\).
+</p>
+<ol class="org-ol">
+<li>\(v_1 = (1,0,1), v_2 = (0,0,0), v_3=(0,1,0) \) 
+Ein Erzeugendensystem von \(K^3\) ist \(E = \left\{e_1, e_2, e_3\right\}\) (nach Vl.).
+Prüfe, ob für alle \(v_i\) gilt: \(v_i \notin <E\setminus\{v_i\}> \).
+<ul class="org-ul">
+<li>\(v_1\)
+Gilt nicht, denn \(v_1\) lässt sich aus \(e_1\) und \(e_3\) linear kombinieren.</li>
+<li>\(v_2\)
+Gilt, denn \(v_2\) lässt sich mit inversen Elementen  bzgl. Addition von K linear kombinieren.</li>
+<li>\(v_3\)
+Gilt, denn \(v_3 =  e_2\) lässt sich nicht mit \(e_1\) und \(e_3\) linear kombinieren.</li>
+</ul></li>
+</ol>
+
+
+
+<p>
+Es sind also nicht alle \(v_i\) linear unabhängig. Jedoch sind
+untereinander \(v_1\) und \(v_3\) linear unabhängig, da nur durch
+skalare Multiplikation mit 0 der Nullvektor erzeugt werden kann.
+</p>
+
+<ol class="org-ol">
+<li>\(v_1 = (1,1,1), v_2=(1,2,4), v_3=(-1,1,-1) \)
+Prüfe ob für alle \(\mathbb{K}\) gilt :\(v_i \notin <E\setminus\{v_i\}> \).</li>
+</ol>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-orgd35ff10" class="outline-3">
+<h3 id="orgd35ff10"><span class="section-number-3">2.2</span> <span class="todo TODO">TODO</span> b)</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Seien \(v_1,...,v_n\) paarweise verschiedene Vektoren aus einem \mathbb{R}-VR \(V\).
+</p>
+<ol class="org-ol">
+<li>\(v_1, v_2\) linear unabhängig \(\Leftrightarrow\)  \(v_{1}+v_2\) linear unabhängig und \(v_{1}-v_2\) linear unabhängig.</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5ca42a1" class="outline-2">
+<h2 id="org5ca42a1"><span class="section-number-2">3</span> <span class="todo TODO">TODO</span> 3 <code>[0/4]</code></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+In \(\mathbb{R}^4\) betrachte
+\(v_1 = (1,2,3,4)\)
+\(v_2 = (1,3,1,-1)\)
+\(v_3 = (3,8,5,2)\)
+\(v_4 = (2,1,3,1)\)
+</p>
+
+<p>
+Außerdem \(U = <v_1,v_2,v_3>\) und \(W = <v_3,v_4>\).
+Bestimmen Sie Basen für:
+</p>
+</div>
+
+<div id="outline-container-org85d23fa" class="outline-3">
+<h3 id="org85d23fa"><span class="section-number-3">3.1</span> <span class="todo TODO">TODO</span> U</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Da U ja sicher durch \( \{v_1,v_2,v_3\} \) erzeugt wird muss nur
+noch folgenden Bedingung geprüft werden: Wenn \(v_1, v_2, v_3\)
+linear unabhängig, dann ist \( \{v_1,v_2,v_3\} \) eine Basis.
+</p>
+
+<p>
+(zz. v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub> linear unabhängig)
+Ansonsten ist klar, dass \(\{e_i| i = 1,..,4\}\) eine Basis ist, da \(U \leq R^4\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea7e8b6" class="outline-3">
+<h3 id="orgea7e8b6"><span class="section-number-3">3.2</span> <span class="todo TODO">TODO</span> W</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Analog zu U
+</p>
+</div>
+</div>
+<div id="outline-container-orgddee816" class="outline-3">
+<h3 id="orgddee816"><span class="section-number-3">3.3</span> <span class="todo TODO">TODO</span> U+W</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+\(U+W = <U\cup W>\), dh prüfe ob alle \(v \in U\cup W\) linear unabhängig.
+(Ist das nicht irgendwie offensichtlich, dass die linear unabhängig sind?)
+Dann sind wiederum die Einheitsvektoren eine Basis und \(U\cup W\) selbst auch.
+</p>
+</div>
+</div>
+<div id="outline-container-orga62e1a2" class="outline-3">
+<h3 id="orga62e1a2"><span class="section-number-3">3.4</span> <span class="todo TODO">TODO</span> U &cap; W</h3>
+</div>
+</div>
+<div id="outline-container-orgd968fb3" class="outline-2">
+<h2 id="orgd968fb3"><span class="section-number-2">4</span> <span class="todo TODO">TODO</span> 4 Sei K endlicher Körper mit q Elementen <code>[0/3]</code></h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> a) Bestimmen Sie die Anzahl der Basen im Vektorraum \(K^n\)</li>
+<li class="off"><code>[&#xa0;]</code> b) Bestimmen Sie für jede natürliche Zahl k &le; n die Anzahl der \(k\)-dimensionalen Unterräume des K<sup>n</sup></li>
+<li class="off"><code>[&#xa0;]</code> c) Folgern Sie, dass es für jede natürliche Zahl k&le; n
+genausoviele \((n-k)\)-dimensionale Unterräume wie
+\(k\)-dimensionale Unterräume im K<sup>n</sup> gibt.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Aaron</p>
+<p class="date">Created: 2017-05-25 Do 14:25</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

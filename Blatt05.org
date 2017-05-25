@@ -1,0 +1,113 @@
+#+LATEX_HEADER: \usepackage{amsthm} \usepackage{pgf} \usepackage{tikz} 
+
+* TODO 1 [1/2]
+  Seien \(U_1, U_2, U_3\) Unterräume eines Vektorraums V. zz:
+  - [X] a) \(U_1 \cup U_2 \leq V \Leftrightarrow U_1 \subseteq U_2 \lor U_2\subseteq U_1  \) 
+
+	  #+begin_proof 
+	  \\
+	  "\(\Rightarrow\)": \\
+	  \(U_1\) und \(U_2\) sind Unterräume von \(V\). \(U_1\cup U_2\) ist ein Unterraum von \(V\).\\
+	  Es ist somit sicher, dass \(U_1,U_2 \neq \emptyset\) und \(U_1 \cup U_2 \neq \emptyset\) .\\
+	  Seien \(a,b \in U_1\cup U_2\). per definitionem gilt:\\
+	  \(a+b \in U_1\cup U_2 \forall a,b \in U_1\cup U_2\) .
+	  Das bedeutet:\\
+	  \(a+b \in U_1 \forall a,b \in U_1\cup U_2 \lor a+b \in U_2 \forall a,b \in U_1\cup U_2 \)\\
+	  Das geht nur, wenn \(U_1 \subseteq U_2 \lor U_2\subseteq U_1\).\\
+	  \\
+	  "\(\Leftarrow\)":\\
+	  Wenn ein Unterraum Teilmenge des anderen ist, dann ist die Vereinigung einfach die Obermenge (der Raum, der den anderen enthält).
+	  Da dieser p.d. ein Unterraum von V ist, ist also auch die Vereinigung ein Unterraum von V.
+	  
+	  #+end_proof
+
+  - [ ] b) \((U_1 + U_2) \cap U_3 = U_1 + (U_2\cap U_3) \Leftrightarrow
+    U_1\subseteq U_3 \)   (Mir kommt das komisch vor, weil der Beweis nur über Mengenlehre läuft, nicht viel über Vektorraumeigenschaften)
+    #+begin_proof
+    \\
+    "\(\Rightarrow\)":\\
+    Seien \(v_1 \in U_1, v_2 \in U_3, v_1+v_2 \in U_{3}\).
+    Dann gilt \(v_1+v_2 \in (U_1 + U_2) \cap U_3\)  und \(v_1+v_2 \in (U_1 + (U_2\cap U_3))\)
+    und somit \(v_2 \in U_3\).
+    Wegen \(v_1+v_2 \in U_{3}\) muss aber auch \(v_1 \in U_3\) sein.
+    Aus der linken Seite folgt also (mit \(v_1+v_2 \in U_{3}\)), dass \(U_1\subseteq U_3\).
+    \\
+    "\(\Leftarrow\):"
+    Beweis durch Kontraposition: zz.: \((U_1 + U_2) \cap U_3 \neq U_1 + (U_2\cap U_3) \Leftrightarrow
+    U_1\nsubseteq U_3 \)
+    Wenn linke Seite nicht gilt, dann für \(v_1\in U_1, v_2\in U_2\):
+    #+begin_center
+    \(v_1+ v_2 \notin U_3 \)
+    #+end_center
+    denn dann ist \(v_1+v_2 \notin (U_1+U_2)\cap U_3\) und \(v_1 + v_2 \in U_1 + (U_2\cap U_3)\).
+    Dh. \(v_2\in U_2\cap U_3\) und \(v_1 \notin U_2\cap U_3\) (Wegen \(v_1+v_2\notin U_3\)), also \(v_1 \notin U_3\Rightarrow U_1 \nsubseteq U_3\)
+    
+    #+end_proof
+  
+* TODO 2 [0/2]
+
+** TODO a)
+  \(K\) Körper. Welche Vektoren sind jeweils linear abhängig, welche
+  linear unabhängig im \(K\)-VR  \(K^3\).
+  1) \(v_1 = (1,0,1), v_2 = (0,0,0), v_3=(0,1,0) \) 
+     Ein Erzeugendensystem von \(K^3\) ist \(E = \left\{e_1, e_2, e_3\right\}\) (nach Vl.).
+     Prüfe, ob für alle \(v_i\) gilt: \(v_i \notin <E\setminus\{v_i\}> \).
+     - \(v_1\)
+       Gilt nicht, denn \(v_1\) lässt sich aus \(e_1\) und \(e_3\) linear kombinieren.
+     - \(v_2\)
+       Gilt, denn \(v_2\) lässt sich mit inversen Elementen  bzgl. Addition von K linear kombinieren.
+     - \(v_3\)
+       Gilt, denn \(v_3 =  e_2\) lässt sich nicht mit \(e_1\) und \(e_3\) linear kombinieren.
+     
+      
+
+  Es sind also nicht alle \(v_i\) linear unabhängig. Jedoch sind
+  untereinander \(v_1\) und \(v_3\) linear unabhängig, da nur durch
+  skalare Multiplikation mit 0 der Nullvektor erzeugt werden kann.
+
+  2) \(v_1 = (1,1,1), v_2=(1,2,4), v_3=(-1,1,-1) \)
+     Prüfe ob für alle \(\mathbb{K}\) gilt :\(v_i \notin <E\setminus\{v_i\}> \). 
+     
+
+
+     
+** TODO b)
+   Seien \(v_1,...,v_n\) paarweise verschiedene Vektoren aus einem \mathbb{R}-VR \(V\).
+   1) \(v_1, v_2\) linear unabhängig \(\Leftrightarrow\)  \(v_{1}+v_2\) linear unabhängig und \(v_{1}-v_2\) linear unabhängig.
+      
+* TODO 3 [0/4]
+  In \(\mathbb{R}^4\) betrachte
+  \(v_1 = (1,2,3,4)\)
+  \(v_2 = (1,3,1,-1)\)
+  \(v_3 = (3,8,5,2)\)
+  \(v_4 = (2,1,3,1)\)
+  
+  Außerdem \(U = <v_1,v_2,v_3>\) und \(W = <v_3,v_4>\).
+  Bestimmen Sie Basen für:
+
+** TODO U
+   Da U ja sicher durch \( \{v_1,v_2,v_3\} \) erzeugt wird muss nur
+   noch folgenden Bedingung geprüft werden: Wenn \(v_1, v_2, v_3\)
+   linear unabhängig, dann ist \( \{v_1,v_2,v_3\} \) eine Basis.
+
+   (zz. v_1, v_2, v_3 linear unabhängig)
+   Ansonsten ist klar, dass \(\{e_i| i = 1,..,4\}\) eine Basis ist, da \(U \leq R^4\).
+
+   #+RESULTS:
+
+** TODO W
+   Analog zu U
+** TODO U+W
+   \(U+W = <U\cup W>\), dh prüfe ob alle \(v \in U\cup W\) linear unabhängig.
+   (Ist das nicht irgendwie offensichtlich, dass die linear unabhängig sind?)
+   Dann sind wiederum die Einheitsvektoren eine Basis und \(U\cup W\) selbst auch.
+** TODO U \cap W
+* TODO 4 Sei K endlicher Körper mit q Elementen [0/3]
+  - [ ] a) Bestimmen Sie die Anzahl der Basen im Vektorraum \(K^n\)
+  - [ ] b) Bestimmen Sie für jede natürliche Zahl k \leq n die Anzahl der \(k\)-dimensionalen Unterräume des K^n
+  - [ ] c) Folgern Sie, dass es für jede natürliche Zahl k\leq n
+    genausoviele \((n-k)\)-dimensionale Unterräume wie
+    \(k\)-dimensionale Unterräume im K^n gibt.
+    
+
+  
