@@ -1,4 +1,4 @@
-#+LATEX_HEADER: \usepackage{amsthm} \usepackage{pgf} \usepackage{tikz} 
+#+LATEX_HEADER: \usepackage{amsthm} \usepackage{pgf} \usepackage{tikz}  
 
 * DONE 1 [2/2]
   Seien \(U_1, U_2, U_3\) Unterräume eines Vektorraums V. zz:
@@ -73,10 +73,24 @@
 
 
      
-** TODO b)
-   Seien \(v_1,...,v_n\) paarweise verschiedene Vektoren aus einem \mathbb{R}-VR \(V\).
+** TODO b) 
+   Seien \(v_1,...,v_n\) paarweise verschiedene Vektoren aus einem \(\mathbb{R}\)-VR \(V\).
    1) \(v_1, v_2\) linear unabhängig \(\Leftrightarrow\)  \(v_{1}+v_2\) linear unabhängig und \(v_{1}-v_2\) linear unabhängig.
-      
+   #+begin_proof   
+
+   \(v_1, v_2\) linear unabhängig \(\Leftrightarrow c_1v_1 + c_2v_2 = 0\)
+   Ersetze v_1 durch v_1+v_2 und v_2 durch v_1-v_2:
+   #+BEGIN_SRC latex
+   \begin{align*}
+    c_1(v_1 + v_2) + c_2(v_1-v_2) &= 0 \\
+    c_1v_1 +c_1v_2 + c_2v_1 - c_2v_2 & = 0\\
+    c_1c_2(v_1) + c_1(-c_2)(v_2) & = 0\\
+   \end{align*}
+   #+END_SRC
+   Wegen v_1, v_2 linear unabhängig \(c_1=c_2=0\), also
+   \(c_1c_2(v_1) + c_1(-c_2)(v_2) = 0\)
+
+   #+end_proof
 * TODO 3 [0/4]
   In \(\mathbb{R}^4\) betrachte
   \(v_1 = (1,2,3,4)\)
